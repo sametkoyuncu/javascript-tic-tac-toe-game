@@ -1,21 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe Game</title>
+    <meta author="Samet Koyuncu">
+    <meta description="Tic Tac Toe Game">
+    <title>Tic Tac Toe Game | by Samet Koyuncu</title>
 
     <!-- styles -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
 
-    <!-- javascript -->
-    <style src="index.js"></style>
+
 </head>
+
 <body>
-    <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem fuga vel veniam veritatis repellendus tenetur, omnis quisquam iusto magni dolor in, quia harum numquam nemo! Aspernatur, beatae autem? Dolore, sequi?</p>
+    <div class="endGame hidden">
+        <h1>Game Over</h1>
+        <p class="winner"></p>
+        <p class="score">Score:
+            <table>
+                <tr>
+                    <td>X:</td>
+                    <td id="scoreX">0</td>
+                </tr>
+                <tr>
+                    <td>O:</td>
+                    <td id="scoreO">0</td>
+                </tr>
+            </table>
+        </p>
+        <button id="playAgainBtn" class="btn" style="margin: 10px auto;">Play Again&nbsp;🔄</button>
     </div>
+    <div class="container">
+
+        <button id="startBtn" class="btn btn-success">New Game&nbsp;▶️</button>
+
+        <div class="gameSection hidden">
+
+            <h1>Tic Toc Toe Game</h1>
+            <p id="currentPlayerParagraph" class="paragraph">
+
+            </p>
+
+
+            <div class="board ">
+                <div id="0" class="cell"></div>
+                <div id="1" class="cell"></div>
+                <div id="2" class="cell"></div>
+                <div id="3" class="cell"></div>
+                <div id="4" class="cell"></div>
+                <div id="5" class="cell"></div>
+                <div id="6" class="cell"></div>
+                <div id="7" class="cell"></div>
+                <div id="8" class="cell"></div>
+            </div>
+
+            <button id="restartBtn" class="btn btn-warning" style="margin: 0 auto;">Restart Game&nbsp;🔄</button>
+        </div>
+
+
+
+    </div>
+
+    <div style="display: flex; justify-content: space-around; margin: 50px 0;">
+        <a class="btn btn-error" target="_blank" href="https://samet.page">👨🏻‍💻&nbsp;@sametkoyuncu</a>
+    </div>
+
+    <!-- javascript -->
+    <script src="index.js"></script>
 </body>
+
 </html>
