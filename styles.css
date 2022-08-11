@@ -1,12 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&family=Rubik+Dirt&display=swap');
+
 :root {
     --primary-color: #26547c;
-    --secondary-color: #fffcf9;
+    --secondary-color: #fcfcf9dc;
     --error-color: #ef476f;
     --warning-color: #ffd166;
     --success-color: #06d6a0;
+    --primary-text: #444;
+    --shadow: 0px 0px 10px rgba(0, 2, 4, 0.2);
   }
 
-  body {
-    background-color: var(--secondary-color);
+body {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-family: 'Rubik Dirt', cursive;
+  font-size: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+p {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+
+.paragraph {
+  margin: 10px 0;
+  max-width: 600px;
+  color: var(--primary-text)
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.endGame {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: -290px;
+}
+
+.winner {
+  margin: 20px 0;
+}
+
+table {
+  margin: 10px auto;
+}
+
+#scoreX, #scoreO {
+  font-family: 'Roboto', sans-serif;
+  color: var(--primary-text);
+  font-size: 2rem;
+  padding: 0 5px;
+}
+
+.btn {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  border: none;
+  text-decoration: none;
+}
+
+.btn:hover {
+  box-shadow: var(--shadow) inset;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: var(--secondary-color);
+}
+
+.btn-warning {
+  background-color: var(--warning-color);
+  color: var(--primary-color);
+}
+
+.btn-error {
+  background-color: var(--error-color);
+  color: var(--secondary-color);
+}
+
+/* 3x3 game board with grid */
+.board {
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 300px;
+    height: 300px;
+    box-shadow: var(--shadow);
+}
+
+/* game board cell */
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 4rem;
+    font-weight: bold;
+    cursor: pointer;
+   
+}
+
+/* game board cell when clicked */
+.cell:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.cell-has-value-x, .cell-has-value-o {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 4rem;
+    font-weight: bold;
+    cursor: not-allowed;
+}
+
+.cell-has-value-x {
+    color: var(--error-color);
+}
+
+.cell-has-value-o {
+    color: var(--warning-color);
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.player-name {
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
     color: var(--primary-color);
-  }
+    box-shadow: var(--shadow);
+}
