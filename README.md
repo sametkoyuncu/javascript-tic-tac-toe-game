@@ -1,4 +1,5 @@
-# Javascript Tic Tac Toe Game
+# Tic Tac Toe
+Pure JavaScript `Tic Tac Toe` game.  
 [Let's play!](https://sametkoyuncu.github.io/javascript-tic-tac-toe-game/)
 
 ## Screenshots
